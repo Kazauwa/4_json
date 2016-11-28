@@ -3,8 +3,8 @@ import json
 
 def load_data(filepath):
     with open(filepath, 'r') as reader:
-        data = reader.read()
-    return json.loads(data)
+        raw_data = reader.read()
+    return json.loads(raw_data)
 
 
 def pretty_print_json(data):
@@ -12,5 +12,5 @@ def pretty_print_json(data):
 
 
 if __name__ == '__main__':
-    data = load_data(input('Input path to json file: '))
-    pretty_print_json(data)
+    raw_json = load_data(input('Input path to json file: '))
+    pretty_print_json(raw_json)
